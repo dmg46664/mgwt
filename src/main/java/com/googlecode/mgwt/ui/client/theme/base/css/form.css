@@ -1,0 +1,79 @@
+/*
+Author: Daniel Kurka
+Alterations: Daniel and Julian Gerson
+Forked from ui\client\theme\base\css\list.css
+*/
+
+/*@url arrowImage listArrow;*/
+@if mgwt.css pretty {
+	@external mgwt-List, mgwt-List-selected, mgwt-List-group, mgwt-List-first, mgwt-List-last, mgwt-List-Header, mgwt-List-round;
+}
+
+.fieldName
+{
+	background-color: #f3f3f3;
+	padding:15px;
+	width: 30%;
+}
+
+.inputWidget
+{
+	padding:15px;
+	/*make the input textbox strech as much as possible without 
+	preventing rounded corners*/
+	width:64%;
+}
+
+.mgwt-List {
+	position: relative;
+	list-style: none;
+	border-collapse: collapse;
+}
+
+.mgwt-List>li {
+	position: relative;
+	list-style-type: none;
+	overflow: hidden;
+	width: auto;
+	/*padding: 12px;*/
+	
+	/*Container LI in spirit, i want to confuse you*/
+	display: -webkit-flexbox;
+}
+
+.mgwt-List-round {
+	padding: 10px;
+}
+
+.mgwt-List-first {
+	
+}
+
+.mgwt-List-last {
+	
+}
+
+/* other browsers */
+@if user.agent ie6 ie8 ie9 gecko opera {
+	.mgwt-List-selected {
+		
+	}
+	.mgwt-List-first {
+		
+	}
+	.mgwt-List-last {
+		
+	}
+	.mgwt-List {
+		
+	}
+	.mgwt-List-Header {
+		
+	}
+	.mgwt-List-round {
+		
+	}
+	.mgwt-List-group {
+		
+	}
+}

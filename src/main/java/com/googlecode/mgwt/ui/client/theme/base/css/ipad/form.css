@@ -1,0 +1,79 @@
+/*
+Author: Daniel Kurka
+Alterations: Daniel and Julian Gerson
+Forked from ui\client\theme\base\css\ipad\list.css
+*/
+
+.mgwt-List > li {
+	background-color: white;
+	border: 1px solid rgb(171, 173, 176);
+	border-bottom: none;
+}
+
+/*For the LI fieldName and inputWidget to have corners*/
+/*top-right*/
+.mgwt-List-round > .mgwt-List-first > .inputWidget{
+	border-top-right-radius: 8px 8px;
+}
+/*top-left*/
+.mgwt-List-round > .mgwt-List-first > .fieldName{
+	border-top-left-radius: 8px 8px;
+}
+/*bottom-left*/
+.mgwt-List-round > .mgwt-List-last > .fieldName{
+	border-bottom-left-radius: 8px 8px;
+}
+/*bottom-right*/
+.mgwt-List-round > .mgwt-List-last > .inputWidget{
+	border-bottom-right-radius: 8px 8px;
+}
+
+/*For the regular LI to have corners*/
+.mgwt-List-round > .mgwt-List-first {
+	border-top-left-radius: 8px 8px;
+	border-top-right-radius: 8px 8px;
+}
+.mgwt-List-round > .mgwt-List-last {
+	border-bottom-left-radius: 8px 8px;
+	border-bottom-right-radius: 8px 8px;
+	border-bottom: 1px solid rgb(171, 173, 176);;
+}
+
+
+.mgwt-List-group {
+	background-image: arrowImage;
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+}
+
+.mgwt-List-group.mgwt-List-selected {
+	font-weight: bold;
+	color: white;
+	background-repeat: no-repeat, repeat;
+	background-position: 100% 50%, 0 0;
+}
+
+@if user.agent safari {
+	.mgwt-List-group.mgwt-List-selected {
+		background-image: arrowImage, literal('-webkit-gradient(linear, left top, left bottom, from(rgb(5, 140, 245)), to(rgb(1, 95, 230)) )');
+	}
+	
+	.mgwt-List>li
+	{
+	display: -webkit-box; 
+    }
+}
+
+@if user.agent gecko1_8 {
+	.mgwt-List-group.mgwt-List-selected {
+		background-image: arrowImage, literal('-moz-linear-gradient(ltop, rgb(5, 140, 245), rgb(1, 95, 230))');
+	}
+}
+
+.mgwt-List-Header {
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 10px 20px 5px;
+	text-shadow: rgba(255, 255, 255, 0.19);
+}

@@ -19,7 +19,10 @@ import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.DataResource;
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.resources.client.TextResource;
+import com.google.gwt.resources.client.ClientBundle.Source;
 import com.googlecode.mgwt.ui.client.theme.MGWTClientBundle;
+
+
 
 /**
  * The ipad client bundle
@@ -53,6 +56,9 @@ public interface MGWTClientBundleBaseThemeIPad extends ClientBundle, MGWTClientB
 
 	@Source({ "css/list.css", "css/ipad/list.css" })
 	ListCss getListCss();
+	
+	@Source({"css/form.css" , "css/ipad/form.css"})
+	FormCss getFormCss();
 
 	@Source("resources/list/arrow.png")
 	DataResource listArrow();
